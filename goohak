@@ -1,0 +1,47 @@
+#!/bin/bash
+# + -- --=[GooHak v1.0 by 1N3 v20150822
+# + -- --=[http://crowdshield.com
+#
+# ABOUT:
+# GooHak is a shell script to automatically launch google hacking queries against a target domain to find vulnerabilities and enumerate a target.
+#
+# DEPENDENCIES:
+# iceweasel
+# Linux
+
+TARGET="$1"
+OKBLUE='\033[94m'
+OKRED='\033[91m'
+OKGREEN='\033[92m'
+OKORANGE='\033[93m'
+RESET='\e[0m'
+
+if [ -z $TARGET ]; then
+	echo -e "$OKORANGE + -- --=[http://crowdshield.com$RESET"
+	echo -e "$OKORANGE + -- --=[GooHak v1.0 by 1N3$RESET"
+	echo -e "$OKORANGE + -- --=[Usage: goohak <domain>$RESET"
+	exit
+fi
+
+iceweasel 2> /dev/null &
+sleep 2
+
+# FIND LOGIN PAGES:
+iceweasel "site:$TARGET username OR password OR login OR root OR admin" 2> /dev/null
+# SEARCH FOR BACKDOORS:
+iceweasel "site:$TARGET inurl:shell OR inurl:backdoor OR inurl:wso OR inurl:cmd OR shadow OR passwd OR boot.ini OR inurl:backdoor" 2> /dev/null
+# FIND SETUP OR INSTALL FILES:
+iceweasel "site:$TARGET inurl:readme OR inurl:license OR inurl:install OR inurl:setup OR inurl:config" 2> /dev/null
+# FIND WORDPRESS PLUGINS/UPLOADS/DOWNLOADS:
+iceweasel "site:$TARGET inurl:wp- OR inurl:plugin OR inurl:upload OR inurl:download" 2> /dev/null
+# FIND OPEN REDIRECTS:
+iceweasel "site:$TARGET inurl:redir OR inurl:url OR inurl:redirect OR inurl:return OR inurl:src=http OR inurl:r=http" 2> /dev/null
+# FIND FILES BY EXTENSION:
+iceweasel "site:$TARGET ext:cgi OR ext:php OR ext:asp OR ext:aspx OR ext:jsp OR ext:jspx" 2> /dev/null
+# FIND DOCUMENTS BY EXTENSION:
+iceweasel "site:$TARGET ext:doc OR ext:docx OR ext:csv OR ext:pdf OR ext:txt OR ext:log OR ext:bak" 2> /dev/null
+# FIND PASTEBIN POSTS FOR DOMAIN:
+iceweasel "site:pastebin.com $TARGET" 2> /dev/null
+# FIND EMPLOYEES ON LINKEDIN:
+iceweasel "site:linkedin.com employees $TARGET" 2> /dev/null
+
