@@ -1,5 +1,5 @@
 #!/bin/bash
-# + -- --=[GooHak v1.2 by 1N3 v20151114
+# + -- --=[GooHak v1.1 by 1N3
 # + -- --=[http://crowdshield.com
 #
 # ABOUT:
@@ -18,7 +18,7 @@ RESET='\e[0m'
 
 if [ -z $TARGET ]; then
 	echo -e "$OKORANGE + -- --=[http://crowdshield.com$RESET"
-	echo -e "$OKORANGE + -- --=[GooHak v1.2 by 1N3$RESET"
+	echo -e "$OKORANGE + -- --=[GooHak v1.1 by 1N3$RESET"
 	echo -e "$OKORANGE + -- --=[Usage: goohak <domain>$RESET"
 	exit
 fi
