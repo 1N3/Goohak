@@ -1,5 +1,5 @@
 #!/bin/bash
-# + -- --=[GooHak v1.0 by 1N3 v20150822
+# + -- --=[GooHak v1.2 by 1N3 v20151114
 # + -- --=[http://crowdshield.com
 #
 # ABOUT:
@@ -18,12 +18,27 @@ RESET='\e[0m'
 
 if [ -z $TARGET ]; then
 	echo -e "$OKORANGE + -- --=[http://crowdshield.com$RESET"
-	echo -e "$OKORANGE + -- --=[GooHak v1.0 by 1N3$RESET"
+	echo -e "$OKORANGE + -- --=[GooHak v1.2 by 1N3$RESET"
 	echo -e "$OKORANGE + -- --=[Usage: goohak <domain>$RESET"
 	exit
 fi
 
 iceweasel 2> /dev/null &
+sleep 2
+
+# LOAD WEBSITE IN A WEB BROSER
+iceweasel http://$TARGET 2> /dev/null
+iceweasel https://$TARGET 2> /dev/null
+# TCPUTILS
+iceweasel http://www.tcpiputils.com/browse/domain/$TARGET 2> /dev/null
+# NETCRAFT
+iceweasel http://toolbar.netcraft.com/site_report?url=$TARGET 2> /dev/null
+# SHOWDAN
+iceweasel https://www.shodan.io/search?query=$TARGET 2> /dev/null
+# CENSYS
+iceweasel https://www.censys.io/ipv4?q=$TARGET 2> /dev/null
+# SSLLABS
+iceweasel https://www.ssllabs.com/ssltest/analyze.html?d=$TARGET 2> /dev/null
 sleep 2
 
 # FIND LOGIN PAGES:
@@ -37,7 +52,7 @@ iceweasel "site:$TARGET inurl:wp- OR inurl:plugin OR inurl:upload OR inurl:downl
 # FIND OPEN REDIRECTS:
 iceweasel "site:$TARGET inurl:redir OR inurl:url OR inurl:redirect OR inurl:return OR inurl:src=http OR inurl:r=http" 2> /dev/null
 # FIND FILES BY EXTENSION:
-iceweasel "site:$TARGET ext:cgi OR ext:php OR ext:asp OR ext:aspx OR ext:jsp OR ext:jspx" 2> /dev/null
+iceweasel "site:$TARGET ext:cgi OR ext:php OR ext:asp OR ext:aspx OR ext:jsp OR ext:jspx OR ext:swf OR ext:fla OR ext:xml" 2> /dev/null
 # FIND DOCUMENTS BY EXTENSION:
 iceweasel "site:$TARGET ext:doc OR ext:docx OR ext:csv OR ext:pdf OR ext:txt OR ext:log OR ext:bak" 2> /dev/null
 # FIND PASTEBIN POSTS FOR DOMAIN:
