@@ -1,4 +1,4 @@
-# GooHak v1.1 by 1N3@CrowdShield
+# GooHak v1.3 by 1N3@CrowdShield
 http://crowdshield.com
 
 ## ABOUT:
