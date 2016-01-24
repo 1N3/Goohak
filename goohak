@@ -24,7 +24,7 @@ if [ -z $TARGET ]; then
 fi
 
 iceweasel 2> /dev/null &
-sleep 2
+sleep 3
 
 # LOAD WEBSITE IN A WEB BROSER
 iceweasel http://$TARGET 2> /dev/null
@@ -38,14 +38,17 @@ iceweasel https://www.shodan.io/search?query=$TARGET 2> /dev/null
 # CENSYS
 iceweasel https://www.censys.io/ipv4?q=$TARGET 2> /dev/null
 # ZONE-H
-iceweasel "site:zone-h.org $TARGET" 2> /dev/null
+iceweasel "https://www.google.ca/search?q=site:zone-h.org+$TARGET" 2> /dev/null
 # XSSPOSED
 iceweasel "https://www.xssposed.org/search/?search=$TARGET&type=host" 2> /dev/null
 # PUNKSPIDER
-iceweasel "https://www.punkspider.org/#searchkey=url&searchvalue=$TARGET&pagenumber=1&filterType=or" 2> /dev/null
+iceweasel "https://securityheaders.io/?q=$TARGET" 2> /dev/null
 # SSLLABS
 iceweasel https://www.ssllabs.com/ssltest/analyze.html?d=$TARGET 2> /dev/null
-sleep 5
+# HEADER CHECK
+iceweasel https://securityheaders.io/?q=$TARGET 2> /dev/null
+
+sleep 8
 
 # FIND LOGIN PAGES:
 iceweasel "https://www.google.ca/search?q=site:$TARGET+username+OR+password+OR+login+OR+root+OR+admin" 2> /dev/null
