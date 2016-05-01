@@ -1,5 +1,5 @@
 #!/bin/bash
-# + -- --=[GooHak v1.3 by 1N3
+# + -- --=[GooHak v1.4 by 1N3
 # + -- --=[http://crowdshield.com
 #
 # ABOUT:
@@ -64,6 +64,8 @@ iceweasel "https://www.google.ca/search?q=site:$TARGET+inurl:redir+OR+inurl:url+
 iceweasel "https://www.google.ca/search?q=site:$TARGET+ext:cgi+OR+ext:php+OR+ext:asp+OR+ext:aspx+OR+ext:jsp+OR+ext:jspx+OR+ext:swf+OR+ext:fla+OR+ext:xml" 2> /dev/null
 # FIND DOCUMENTS BY EXTENSION:
 iceweasel "https://www.google.ca/search?q=site:$TARGET+ext:doc+OR+ext:docx+OR+ext:csv+OR+ext:pdf+OR+ext:txt+OR+ext:log+OR+ext:bak" 2> /dev/null
+# FIND APACHE STRUTS RCE's:
+iceweasel "https://www.google.ca/search?q=site:$TARGET+ext:action+OR+struts" 2> /dev/null
 # FIND PASTEBIN POSTS FOR DOMAIN:
 iceweasel "https://www.google.ca/search?q=site:pastebin.com+$TARGET" 2> /dev/null
 # FIND EMPLOYEES ON LINKEDIN:
