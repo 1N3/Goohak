@@ -1,5 +1,5 @@
 #!/bin/bash
-# + -- --=[GooHak v1.4 by 1N3
+# + -- --=[GooHak v1.5 by 1N3
 # + -- --=[http://crowdshield.com
 #
 # ABOUT:
@@ -18,13 +18,13 @@ RESET='\e[0m'
 
 if [ -z $TARGET ]; then
 	echo -e "$OKORANGE + -- --=[http://crowdshield.com$RESET"
-	echo -e "$OKORANGE + -- --=[GooHak v1.3 by 1N3$RESET"
+	echo -e "$OKORANGE + -- --=[GooHak v1.5 by 1N3$RESET"
 	echo -e "$OKORANGE + -- --=[Usage: goohak <domain>$RESET"
 	exit
 fi
 
 iceweasel 2> /dev/null &
-sleep 3
+sleep 5
 
 # LOAD WEBSITE IN A WEB BROSER
 iceweasel http://$TARGET 2> /dev/null
@@ -37,6 +37,8 @@ iceweasel http://toolbar.netcraft.com/site_report?url=$TARGET 2> /dev/null
 iceweasel https://www.shodan.io/search?query=$TARGET 2> /dev/null
 # CENSYS
 iceweasel https://www.censys.io/ipv4?q=$TARGET 2> /dev/null
+# CRT.SH
+iceweasel https://crt.sh/?q=%25.$TARGET 2> /dev/null
 # ZONE-H
 iceweasel "https://www.google.ca/search?q=site:zone-h.org+$TARGET" 2> /dev/null
 # XSSPOSED
@@ -48,7 +50,7 @@ iceweasel https://www.ssllabs.com/ssltest/analyze.html?d=$TARGET 2> /dev/null
 # HEADER CHECK
 iceweasel https://securityheaders.io/?q=$TARGET 2> /dev/null
 
-sleep 8
+sleep 30
 
 # FIND LOGIN PAGES:
 iceweasel "https://www.google.ca/search?q=site:$TARGET+username+OR+password+OR+login+OR+root+OR+admin" 2> /dev/null
