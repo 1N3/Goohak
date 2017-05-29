@@ -27,29 +27,8 @@ fi
 open 2> /dev/null &
 sleep 5
 
-# LOAD WEBSITE IN A WEB BROSER
-open http://$TARGET 2> /dev/null
-open https://$TARGET 2> /dev/null
-# TCPUTILS
-open http://www.tcpiputils.com/browse/domain/$TARGET 2> /dev/null
-# NETCRAFT
-open http://toolbar.netcraft.com/site_report?url=$TARGET 2> /dev/null
-# SHOWDAN
-open https://www.shodan.io/search?query=$TARGET 2> /dev/null
-# CENSYS
-open https://www.censys.io/ipv4?q=$TARGET 2> /dev/null
-# ZONE-H
-open "https://www.google.ca/search?q=site:zone-h.org+$TARGET" 2> /dev/null
-# XSSPOSED
-open "https://www.xssposed.org/search/?search=$TARGET&type=host" 2> /dev/null
-# PUNKSPIDER
-open "https://securityheaders.io/?q=$TARGET" 2> /dev/null
-# SSLLABS
-open https://www.ssllabs.com/ssltest/analyze.html?d=$TARGET 2> /dev/null
-# HEADER CHECK
-open https://securityheaders.io/?q=$TARGET 2> /dev/null
-
-sleep 30
+# Google Dorks
+echo "Opening Browser with search terms per tab"
 
 # FIND LOGIN PAGES:
 open "https://www.google.ca/search?q=site:$TARGET+username+OR+password+OR+login+OR+root+OR+admin" 2> /dev/null
