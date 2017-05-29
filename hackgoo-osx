@@ -71,3 +71,9 @@ open "https://www.google.ca/search?q=site:$TARGET+ext:action+OR+ext:struts" 2> /
 open "https://www.google.ca/search?q=site:pastebin.com+$TARGET" 2> /dev/null
 # FIND EMPLOYEES ON LINKEDIN:
 open "https://www.google.ca/search?q=site:linkedin.com+employees+$TARGET" 2> /dev/null
+
+# Find Subdomains
+open "https://www.google.ca/search?q=site:*.$TARGET" 2> /dev/null
+
+# Find Sub-subdomains
+open "https://www.google.ca/search?q=site:*.*.$TARGET" 2> /dev/null
