@@ -1,11 +1,5 @@
-# GooHak v1.3 by 1N3@CrowdShield
+# GooHak v1.6 by 1N3@CrowdShield
 http://crowdshield.com
-
-## Modified:
-Modified to work on OSX using Sed:
-
-`sed 's/iceweasel/open/g' goohak > hackgoo`
-
 
 ## ABOUT:
 GooHak is a shell script to automatically launch google hacking queries against a target domain to find vulnerabilities and enumerate a target.
@@ -14,7 +8,12 @@ GooHak is a shell script to automatically launch google hacking queries against 
 * iceweasel
 * Linux
 
-## USAGE:
+## LINUX USAGE:
 ```
 ./goohak domain.com
+```
+
+## OSX USAGE:
+```
+hackgoo domain.com
 ```
