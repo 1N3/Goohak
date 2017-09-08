@@ -1,5 +1,5 @@
 #!/bin/bash
-# + -- --=[GooHak v1.6 by 1N3
+# + -- --=[GooHak by 1N3
 # + -- --=[http://crowdshield.com
 #
 # ABOUT:
@@ -10,7 +10,8 @@
 # Linux
 
 TARGET="$1"
-BROWSER="iceweasel" // CHANGE TO DEFAULT BROWSER OR USE iceweasel
+BROWSER="iceweasel" # CHANGE TO DEFAULT BROWSER OR USE iceweasel
+VER="1.7"
 OKBLUE='\033[94m'
 OKRED='\033[91m'
 OKGREEN='\033[92m'
@@ -19,7 +20,7 @@ RESET='\e[0m'
 
 if [ -z $TARGET ]; then
 	echo -e "$OKORANGE + -- --=[http://crowdshield.com$RESET"
-	echo -e "$OKORANGE + -- --=[GooHak v1.6 by 1N3$RESET"
+	echo -e "$OKORANGE + -- --=[GooHak v$VER by 1N3$RESET"
 	echo -e "$OKORANGE + -- --=[Usage: goohak <domain>$RESET"
 	exit
 fi
