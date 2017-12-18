@@ -12,6 +12,12 @@ Automatically launch google hacking queries against a target domain to find vuln
 ./goohak domain.com
 ```
 
+## OS X USAGE:
+```
+./goohak targeturl.com google.extension
+e.g. ./goohak targeturl.com co.uk
+```
+
 ## LICENSE:
 This software is free to distribute, modify and use with the condition that credit is provided to the creator (1N3@CrowdShield) and is not for commercial use.
 
