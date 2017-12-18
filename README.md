@@ -16,6 +16,7 @@ Automatically launch google hacking queries against a target domain to find vuln
 ```
 ./goohak targeturl.com google.extension
 e.g. ./goohak targeturl.com co.uk
+e.g. ./goohak targeturl.com com
 ```
 
 ## LICENSE:
