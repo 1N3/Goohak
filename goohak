@@ -51,6 +51,8 @@ $BROWSER "https://securityheaders.io/?q=$TARGET" 2> /dev/null
 $BROWSER https://www.ssllabs.com/ssltest/analyze.html?d=$TARGET 2> /dev/null
 # HEADER CHECK
 $BROWSER https://securityheaders.io/?q=$TARGET 2> /dev/null
+# DOMAIN INFO SEARCH
+$BROWSER https://securitytrails.com/search/domain/$TARGET 2> /dev/null
 
 sleep 30
 
