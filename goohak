@@ -35,8 +35,6 @@ $BROWSER http://www.tcpiputils.com/browse/domain/$TARGET 2> /dev/null
 $BROWSER http://toolbar.netcraft.com/site_report?url=$TARGET 2> /dev/null
 # SHOWDAN
 $BROWSER https://www.shodan.io/search?query=$TARGET 2> /dev/null
-
-sleep $DELAY
 # CENSYS
 $BROWSER https://www.censys.io/ipv4?q=$TARGET 2> /dev/null
 # CRT.SH
@@ -45,7 +43,6 @@ $BROWSER https://crt.sh/?q=%25.$TARGET 2> /dev/null
 $BROWSER "https://www.google.ca/search?q=site:zone-h.org+$TARGET" 2> /dev/null
 # XSSPOSED
 $BROWSER "https://www.xssposed.org/search/?search=$TARGET&type=host" 2> /dev/null
-
 # SECURITYHEADERS
 $BROWSER "https://securityheaders.io/?q=$TARGET" 2> /dev/null
 # SSLLABS
@@ -56,14 +53,14 @@ $BROWSER https://securityheaders.io/?q=$TARGET 2> /dev/null
 $BROWSER https://www.threatcrowd.org/domain.php?domain=$TARGET 2> /dev/null
 # ZOOMEYE
 $BROWSER https://www.zoomeye.org/searchResult/bugs?q=$TARGET 2> /dev/null
-
+# DOMAIN INFO SEARCH
+$BROWSER https://securitytrails.com/search/domain/$TARGET 2> /dev/null
 # WAYBACKMACHINE
 $BROWSER https://web.archive.org/web/*/$TARGET 2> /dev/null
 # REVERSEDNS
 $BROWSER http://viewdns.info/reversewhois/?q=$TARGET 2> /dev/null
 # PUNKSPIDER
 $BROWSER "https://www.punkspider.org/#searchkey=url&searchvalue=$TARGET&pagenumber=1&filterType=or" 2> /dev/null
-
 
 sleep $DELAY
 # FIND SUBDOMAINS
