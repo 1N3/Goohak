@@ -4,7 +4,7 @@
 Automatically launch google hacking queries against a target domain to find vulnerabilities and enumerate a target.
 
 ## DEPENDENCIES(Linux):
-* firefox
+* xdg-open
 * Linux
 
 ## LINUX USAGE:
@@ -23,5 +23,5 @@ Donations are welcome. This will help fascilitate improved features, frequent up
 - [x] LTC LQ6mPewec3xeLBYMdRP4yzeta6b9urqs2f
 
 ## AUTHOR:
-1N3@CrowdShield
-https://crowdshield.com
+@xer0dayz
+https://xerosecurity.com
