@@ -1,6 +1,6 @@
 #!/bin/bash
 # + -- --=[GooHak by @xer0dayz
-# + -- --=[http://xerosecurity.com
+# + -- --=[http://sn1persecurity.com
 #
 # ABOUT:
 # GooHak is a shell script to automatically launch google hacking queries against a target domain to find vulnerabilities and enumerate a target.
@@ -20,7 +20,7 @@ DELAY=5
 RESET='\e[0m'
 
 if [ -z $TARGET ]; then
-	echo -e "$OKORANGE + -- --=[https://xerosecurity.com$RESET"
+	echo -e "$OKORANGE + -- --=[https://sn1persecurity.com$RESET"
 	echo -e "$OKORANGE + -- --=[GooHak v$VER by @xer0dayz$RESET"
 	echo -e "$OKORANGE + -- --=[Usage: goohak <domain>$RESET"
 	exit

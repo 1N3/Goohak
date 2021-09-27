@@ -17,4 +17,4 @@ This software is free to distribute, modify and use with the condition that cred
 
 ## AUTHOR:
 @xer0dayz
-https://xerosecurity.com
+https://sn1persecurity.com
