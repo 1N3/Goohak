@@ -7,7 +7,7 @@ Automatically launch google hacking queries against a target domain to find vuln
 * xdg-open
 * Linux
 
-## LINUX USAGE:
+## LINUX/OSX USAGE:
 ```
 ./goohak domain.com
 ```
@@ -18,3 +18,7 @@ This software is free to distribute, modify and use with the condition that cred
 ## AUTHOR:
 @xer0dayz
 https://sn1persecurity.com
+
+## Additions by:
+
+@gr4y-r0se
